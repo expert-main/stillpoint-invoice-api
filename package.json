@@ -1,0 +1,59 @@
+{
+  "name": "stillpoints-invoice-api",
+  "version": "1.0.0",
+  "description": "stillpoint invoice management api",
+  "author": "webdev778",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "babel ./server -s --minified --delete-dir-on-start -d dist",
+    "dev": "nodemon -w ./server -x npx babel-node index.js",
+    "lint": "eslint",
+    "db:migrate": "npx sequelize db:migrate",
+    "db:restore": "npx sequelize db:migrate:undo:all",
+    "server": "npm-run-all -s build start"
+  },
+  "main": "index.js",
+  "keywords": [
+    "stillpoint"
+  ],
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.17.2",
+    "continuation-local-storage": "^3.2.1",
+    "dotenv": "^4.0.0",
+    "dotenv-parse-variables": "^0.1.0",
+    "express": "^4.15.4",
+    "express-jwt": "^5.3.1",
+    "guid": "0.0.12",
+    "jwks-rsa": "^1.6.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.1",
+    "nodemailer": "^4.0.1",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "rfr": "^1.2.3",
+    "sequelize": "^5.18.1",
+    "sequelize-cli": "^5.5.1",
+    "stripe": "^7.9.0",
+    "underscore": "^1.8.3",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "nodemon": "^1.11.0",
+    "npm-run-all": "^3.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webdev778/stillpointspaces-invoice.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webdev778/stillpointspaces-invoice/issues"
+  },
+  "homepage": "https://github.com/webdev778/stillpointspaces-invoice#readme"
+}
