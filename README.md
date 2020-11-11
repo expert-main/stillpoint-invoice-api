@@ -57,3 +57,5 @@ Run `brew services start postgresql` to start postgresql after install.
 
 1. View the development environment website at [`http://localhost:3001`](http://localhost:3001)
 
+### Usage
+This project is api system for stripe.
